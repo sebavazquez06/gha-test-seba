@@ -18,8 +18,15 @@ jobs:
       - name: List files from this GitHub virtual machine
         run: |
           pwd  
-          ls
-        
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: List files after checkout (cloning repo)
+        run: |
+          pwd  
+          ls -a
+
 
 
 

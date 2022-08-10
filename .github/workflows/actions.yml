@@ -16,7 +16,7 @@ jobs:
         run: echo "${{ steps.greet.outputs.time }}"
 
       - name: List files from this GitHub virtual machine
-        run: !
+        run: |
           pwd  
           ls
         

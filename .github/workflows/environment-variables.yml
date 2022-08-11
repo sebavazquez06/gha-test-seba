@@ -3,6 +3,7 @@ on: push
 env:
   WF_ENV: Variables available for all the workflow
   SEBA_SECRET: ${{ secrets.SEBA_SECRET }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #Secret que existe por defecto sin crearlo 
 
 
 jobs:
@@ -18,6 +19,8 @@ jobs:
           echo "WF_ENV: ${WF_ENV}"
           echo "JOB_ENV: ${JOB_ENV}"
           echo "STEP_ENV: ${STEP_ENV}"
+          echo "SEBA_SECRET: ${SEBA_SECRET}"
+          echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
       - name: Log ENV variables - Test 2
         run: |
           echo "WF_ENV: ${WF_ENV}"

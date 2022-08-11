@@ -2,6 +2,7 @@ name: ENV variables
 on: push
 env:
   WF_ENV: Variables available for all the workflow
+  SEBA_SECRET: ${{ secrets.SEBA_SECRET }}
 
 
 jobs:
